@@ -1,0 +1,70 @@
+.main {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 15px;
+  border: none;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background-color: #f9f9f9;
+  transition: 0.3s ease;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  margin: 1.5rem auto;
+  position: relative;
+}
+
+.main:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.main img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  object-position: center;
+  transition: 0.3s ease;
+  border-bottom: 1px solid #ddd;
+}
+
+.main:hover img {
+  opacity: 0.9;
+}
+
+.main h3 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #2c3e50;
+  margin: 1rem 0;
+  padding: 0 1rem;
+  line-height: 1.4;
+  transition: color 0.3s ease;
+  will-change: color;
+}
+
+.main:hover h3 {
+  color: #3498db;
+}
+
+.main::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.05);
+  transition: 0.3s ease;
+}
+
+.main:hover::after {
+  box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .main {
+    width: 90%;
+    margin: 1rem auto;
+  }
+}
